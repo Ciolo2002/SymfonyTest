@@ -3,8 +3,10 @@
 {% block title %}{{ parent() }} Hello World {% endblock %}
 
 {% block body %}
-    <h1>Hello {{ tony|upper }}!</h1>
-    {% if tony == 'tony' %}
-        <p>tony is here!</p>
-    {% endif %}
+
+    <h1>Hello World</h1>
+    <p>Welcome to the Symfony application!</p>
+    {%  for ship in ships %}
+        <p><a href="{{ path('ship', { 'id': ship.id }) }}">{{ ship.name }}</a></p>
+    {% endfor %}
 {% endblock %}
