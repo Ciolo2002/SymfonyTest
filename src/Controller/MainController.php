@@ -14,8 +14,7 @@ class MainController extends AbstractController
     #[Route('/')]
     public function index(StarshipRepository $starshipRepository): Response
     {
-
-        $ships=$starshipRepository->all();
+        $ships=$starshipRepository->findAll();
         return $this->render('main/index.html.twig', compact('ships'));
     }
 }
