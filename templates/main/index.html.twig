@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Hello World {% endblock %}
+
+{% block body %}
+    <h1>Hello {{ tony|upper }}!</h1>
+    {% if tony == 'tony' %}
+        <p>tony is here!</p>
+    {% endif %}
+{% endblock %}
