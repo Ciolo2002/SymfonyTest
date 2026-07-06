@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Symfony OAuth - Admin{% endblock %}
+{% block body %}
+    <div>
+        <h1>Admin - Secured</h1>
+        <div>
+            {% if app.user and app.user.getUserIdentifier() %}
+                Logged in as {{ app.user.userIdentifier }} - <a href="{{ path('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

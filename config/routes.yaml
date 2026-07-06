@@ -9,3 +9,9 @@
 
 controllers:
     resource: routing.controllers
+
+login:
+    path: /connect/google
+
+logout:
+    path: /logout
